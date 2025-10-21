@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavLinks from "./components/navbar/navbar";
 import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
 
 export const metadata: Metadata = {
   title: "X",
@@ -18,8 +19,11 @@ export default function RootLayout({
       <body>
         <Header />
         <NavLinks />
+        <main>
         {children}
+        </main>
       </body>
+      <Footer />
     </html>
   );
 }
